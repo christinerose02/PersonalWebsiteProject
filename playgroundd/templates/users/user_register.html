@@ -1,0 +1,98 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/login.style.css'%}"> 
+    {%block script%}
+    <script src="{%static 'js/newscheduler.js'%}"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    {%endblock%}
+    <title>Register</title>
+</head>
+<body>
+    <section id="header">
+        <img src="{%static 'images/cliniclogo.png'%}" alt="logo" width="80px" height="80px">
+        <div>
+            <ul id="navbar">
+                <li><a href="user_register.html">Home</a></li>
+                <li><a href="user_register.html">Clinic Calendar</a></li>
+                <li><a href="user_register.html">Appointment Scheduler</a></li>
+                <li><a class="active" href="user_register.html">Account</a></li>
+            </ul>
+        </div>
+    </section>
+    {% comment %} <section id="login-register">
+        <div class="login-form-container">
+            <div class="container-left"><br><br><br><br><br><br><br><br>
+                <img src="{%static './images/cliniclogo.png'%}" alt="">
+            </div>
+            <div class="container-right">
+                <h2>Welcome to HAPPY PAWS CLINIC!</h2>
+                
+               
+                <div class="form-control">
+                    <input type = "text" placeholder="username" id ="username" name = "username" onkeyup = "validateName()"/>
+                    <span id ="name-error"></span>
+                </div>
+
+                <div class="form-control">
+                    <input type = "text" placeholder="email" id ="email" name = "email" onkeyup = "validateEmail()"/>
+                    <span id ="email-error"></span>
+                </div>
+
+                <div class="form-control">
+                    <input type = "password" placeholder="password" id ="password" name = "password" onkeyup = "validatePassword()"/>
+                    <span id ="password-error"></span>
+                </div>
+
+                <div class="form-control">
+                    <input type = "password" placeholder="confirm password" id ="password2" name = "password2" onkeyup = "validatePassword()"/>
+                    <span id ="password2-error"></span>
+                </div>
+
+
+                <button onclick = "return validationForm()"> Create Account </button>
+                <p class = "message">Already have an account? <a href={% url 'login'%}>Sign in</a></p>
+
+            </div>
+        </div>
+    </section>  {% endcomment %}
+    <section id="login-register">
+        <div class="login-form-container">
+            <div class="container-left"><br><br><br><br><br><br><br><br>
+                <img src="{%static './images/cliniclogo.png'%}" alt="">
+            </div>
+            <div class="container-right">
+                <h2>Welcome to HAPPY PAWS CLINIC!</h2>
+                {% if form.errors %}
+                    <div class="alert alert-danger">
+                    {% for field, error in form.errors.items %}
+                    {{ field }}: {{ error }}
+                    {% endfor %}
+                    </div>
+                {% endif %}
+
+                <form class="user-login-form" action="{% url 'register'%}" method="Post">
+                    {%csrf_token%}
+                    <!-- {{ form.username.label_tag }}
+                    {{ form.username }}
+                    {{ form.email.label_tag }}
+                    {{ form.email }}
+                    {{ form.password1.label_tag }}
+                    {{ form.password1 }}
+                    {{ form.password2.label_tag }}
+                    {{ form.password2 }} -->
+                    {{form.as_p}}
+                    <input class="btn-submit" type="submit">
+                    <p>Already have an account? <a class="register" href="{% url 'login'%}">Log in</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/login.style.css'%}">
+    <script src="account.js"></script>
+    <title>Log In</title>
+</head>
+<body>
+    <section id="header">
+        <img src="{%static 'images/cliniclogo.png'%}" alt="logo" width="80px" height="80px">
+        <div>
+            <ul id="navbar">
+                <li><a href="user_login.html">Home</a></li>
+                <li><a href="user_login.html">Clinic Calendar</a></li>
+                <li><a href="user_login.html">Appointment Scheduler</a></li>
+                <li><a class="active" href="user_login.html">Account</a></li>
+            </ul>
+        </div>
+    </section>
+
+    
+    
+<section>
+    <div class="login-form-container">
+        <div class="container-left"><br>
+            <img src="{%static './images/cliniclogo.png'%}" alt="">
+        </div>
+        <div class="container-right">
+            <h2>Welcome to HAPPY PAWS CLINIC!</h2>
+            {% if form.errors %}
+            <div class="alert alert-danger">
+            {% for field, error in form.errors.items %}
+            {{ field }}: {{ error }}
+            {% endfor %}
+            </div>
+        {% endif %}
+            <form class="user-login-form" action="" method="Post">
+                {%csrf_token%}
+                <label class="username" for="">Username</label><br>
+                <input type="text" name="username" placeholder="Enter your Username"><br>
+                <label class="password" for="">Password</label><br>
+                <input type="password" name="password" placeholder="Enter your Password"><br> 
+                <input class="btn-submit" type="submit">
+                <p>Dont have an account? <a class="register" href="{% url 'register'%}">Register</a></p>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
+

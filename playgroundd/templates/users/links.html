@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <script src ="path/to/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script> src= "login.js"</script>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+    {%block css%} {%endblock %}
+    <title>Links</title>
+</head>
+<body>
+    <!--NavBar --> 
+    <section id="header">
+        <img src="{%static 'images/logo.png'%}" alt="logo" width="80px" height="80px">
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">|| Home ||</a></li>
+                <li><a href="aboutme.html">|| About Me ||</a></li>
+                <li><a href="emoji.html">|| Emoji ||</a></li>
+                <li><a href="gallery.html">|| Gallery ||</i></a></li>
+                <li><a class="active" href="links.html">|| Follow me On ||</a></li>
+                <li><a href="user_login.html">MY SHOP</a></li>
+            </ul>
+        </div>
+    </section><br>
+    
+    <div style="text-align:center">
+        <p>Follow me on my☺☺☺</p>
+        <p>&#9825&#9825&#9825&#9825&#9825- - - - -| S O C I A L&nbsp;&nbsp;&nbsp;M E D I A&nbsp;&nbsp;&nbsp;A C C O U N T S |- - - - -&#9825&#9825&#9825&#9825&#9825</p><br>
+    </div>
+    
+    <hr style="height:5px;border-width:0;color:gray;background-color:pink"><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:grey"><br><br><br>
+
+    <section id="icons">
+        <div class="icon">
+        <img src="{%static 'images/fb.png'%}" alt="" width="90px" height="90px">
+            <a class="fb"href="https://www.facebook.com/christinerose.llorando.17/">Facebook&rarr;</a></p>
+        </div>
+        <div class="icon">
+        <img src="{%static 'images/ig.png'%}" alt="" width="90px" height="90px">
+            <a href="https://www.instagram.com/rosecea02/">Instagram&rarr;</a></p>
+        </div>
+        <div class="icon">
+        <img src="{%static 'images/twitter.png'%}" alt="" width="90px" height="90px">
+            <a href="https://twitter.com/jmnprk9502" width="90px" height="90px">Twitter&rarr;</a></p>
+        </div>
+        <div class="icon">
+        <img src="{%static 'images/tiktok.png'%}" alt="" width="90px" height="90px"> 
+            <a href="https://www.tiktok.com/@rosecea_">Tiktok&rarr;</a></p>
+        </div>
+    </section><br><br><br>
+
+    <script>
+            $(document).ready(function(){
+            $("#icons .fb").click(function(){
+            alert("Directing to Facebook Page");
+        });
+        });
+    </script>
+
+    <hr style="height:2px;border-width:0;color:gray;background-color:grey"><br>
+    <hr style="height:5px;border-width:0;color:gray;background-color:pink"><br>
+
+</body>
+</html>

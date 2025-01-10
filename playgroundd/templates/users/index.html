@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {%load static%}
+        <link rel="stylesheet" href="{% static 'css/index.css'%}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    {%block css%}{%endblock%}
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script src="login.js"></script>
+    
+    <title>Home</title>
+</head>
+<body>
+
+<!--NavBar --> 
+    <section id="header">
+        <img src="{%static 'images/logo.png'%}" alt="logo" width="80px" height="80px">
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">|| Home ||</a></li>
+               
+                <li><a href="aboutme.html">|| About Me ||</a></li>
+                <li><a href="emoji.html">|| Emoji ||</a></li>
+                <li><a href="gallery.html">|| Gallery ||</i></a></li>
+                <li><a href="links.html">|| Follow me On ||</a></li>
+                <li><a href="user_login.html">MY SHOP</a></li>
+            </ul>
+        </div>
+    </section><br><br>
+
+<!--  --> 
+    <section id="welcome">
+            <img class="mySlides" src="{%static 'images/intro1.gif'%}" style="width:700px" alt= "intro1"> 
+            <img class="mySlides" src="{%static 'images/intro2.gif'%}" style="width:700px" alt= "intro2">
+            <img class="mySlides" src="{%static 'images/intro3.gif'%}" style="width:700px" alt= "intro3">
+            
+        
+        <script>
+            var myIndex = 0;
+            carousel();
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 2000);
+                }
+            </script>
+
+        <div class="mypic">
+            <img src="{%static 'images/mypic.png'%}" alt="mypic" width="500px" height="500px">
+        </div>
+            
+        <div class="know">
+            <h1>This is my <span>PERSONAL WEBSITE!</span></h1><br>
+            <p>G e t&nbsp;&nbsp;&nbsp;t o&nbsp;&nbsp;&nbsp;k n o w&nbsp;&nbsp;&nbsp;m o r e&nbsp;&nbsp;&nbsp;a b o u t&nbsp;&nbsp;&nbsp;m e!💜</p><br>
+            <button class="card-btn"> <a href="aboutme.html">Explore More<span>&rarr;</a> </span></button>
+
+        </div>
+    </section><br><br>
+
+    
+    <section id="photography">
+        <h1>p h o t o g r a p h y</h1>
+        <h2>insta: @rosecea02</h2>
+        <div class="photo">
+            <div class="photos">
+                <img src="{%static 'images/insta1.jpg'%}" alt="mypic" width="300px" height="300px">
+            </div>
+            <div class="photos">
+                <img src="{%static 'images/insta2.jpg'%}" alt="mypic" width="300px" height="300px">
+            </div>
+            <div class="photos">
+                <img src="{%static 'images/insta3.jpg'%}" alt="mypic" width="300px" height="300px">
+            </div>
+        </div>
+        <div class="photo">
+            <div class="photos">
+                <img src="{%static 'images/insta4.jpg'%}" alt="mypic" width="300px" height="300px">
+            </div>
+            <div class="photos">
+                <img src="{%static 'images/insta5.jpg'%}" alt="mypic" width="300px" height="300px">
+            </div>
+            <div class="photos">
+                <img src="{%static 'images/insta6.jpg'%}" alt="mypic" width="300px" height="300px">
+            </div>
+        </div>
+        <div class="photo">
+            <div class="photos">
+                <img src="{%static 'images/insta7.jpg'%}" alt="mypic" width="300px" height="300px">
+            </div>
+            <div class="photos">
+                <img src="{%static 'images/insta8.jpg'%}" alt="mypic" width="300px" height="300px">
+            </div>
+            <div class="photos">
+                <img src="{%static 'images/insta9.jpg'%}" alt="mypic" width="300px" height="300px">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 90px;
+    background-color: white;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 18px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 500;
+    color: black;
+    transition: 0.2s ease;
+}
+
+#navbar li a.active{
+    color: pink;
+}
+
+#navbar i:hover,
+#navbar i.active{
+    color: red;
+}
+
+#pic-account {
+    background-image: linear-gradient(rgba(0, 0, 5, 0.1), rgba(0, 0, 5, 0)), url('images/pastel1.png');   
+    display: flex;
+}
+
+#pic-account img{
+    margin-top: -190px;
+    margin-left: 100px;
+    width: 100%;
+    height: 130vh;
+}
+
+#logsign {
+    width: 100%;
+    height: 98vh;
+}
+
+#logsign .form-box {
+    margin-left: 300px;
+    width: 30%;
+    height: 90vh;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background: #fff;
+    padding: 50px 60px 70px;
+    margin-top: -440px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+#logsign .form-box:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+    transition: .2s ease;
+}
+
+#logsign .form-box h1 {
+    padding: 16px;
+    background-color: whitesmoke;
+    border-radius: 13px;
+    font-size: 20px;
+    margin-bottom: 60px;
+    color: gray;
+    position: relative;
+}
+
+#logsign .form-box h1::after {
+    content: '';
+    width: 40px;
+    height: 4px;
+    border-radius: 3px;
+    background: pink;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#logsign .input-field {
+    background: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+#logsign .container .form-box input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+
+#logsign .input-field i {
+    margin-left: 15px;
+    color: black;
+}
+
+form p {    
+    text-align: left;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+form p a {
+    text-decoration: none;
+    color: #3c00a0;
+}
+
+form p a:hover {
+    text-decoration: 1px underline solid #3c00a0;
+    transition: .3s ease;
+}
+
+#logsign .btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logsign .btn-field button {
+    flex-basis: 48%;
+    background: pink;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+#logsign .input-group {
+    height: 300px;
+}
+
+#logsign .btn-field button.disable {
+    transition: .2s ease;
+    background: #eaeaea;
+    color: #555;
+}

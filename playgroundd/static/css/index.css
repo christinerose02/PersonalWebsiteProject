@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css7family=OPpen-Sans:400;500&display=swap');
+@import url('https://kit.fontawesome.com/c4254e24a8.js');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    width: 100%;
+    
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 90px;
+    background-color: white;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 9px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    transition: 0.2s ease;
+}
+
+#navbar li a:hover {
+    color: red;
+}
+
+#navbar li a.active{
+    color: pink;
+}
+
+/*Welcome*/
+
+#welcome {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-image:  url('../images/wall2.png');  
+    background-size: cover;
+    height: 80vh;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+#welcome h1 {
+    text-align: center;
+    font-size: 0px;
+    
+}
+
+#welcome h2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#welcome .img {
+    width: 500px;
+    height: 500px;
+}
+
+#welcome .know h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+#welcome .know h1 span {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 800;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.9);
+}
+
+#welcome .know p{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 8px;
+    background-color: gray;
+    border-radius: 14px;
+}
+
+/* About Me*/
+
+.about-me h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    padding: 5px;
+    background-image: url('../images/wall2.png');
+    background-size: cover;
+    border-radius: 30px;
+    border: 1px solid white;
+    box-shadow: 0 5px 15px rgba(112, 17, 104, 0.5);
+}
+#aboutme {
+    background-image: url('../images/wall3.png');
+    background-size: cover;
+    padding: 20px 20px 20px 20px;
+    height: 91vh;
+    display: flex;
+}
+
+#aboutme .me img {
+    padding: 15px 15px 15px 15px;
+    width: 400px;
+    border-radius: 60px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    
+}
+
+#aboutme .me img:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.4);
+}
+
+#aboutme .about table{
+    padding: 22px;
+    text-align: justify;
+}
+
+#aboutme .about p {
+    padding: 0 20px;
+    border-radius: 60px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    text-align: justify;
+    font-size: 18px;
+}
+
+button a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+
+button a:hover {
+    color: purple;
+}
+
+/*Emoji*/
+
+#myfav h1{
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 10px;
+    background-image: url('../images/wall2.png');
+    background-size: cover;
+    border-radius: 25px;
+    border: 1px solid white;
+    box-shadow: 0 5px 15px rgba(112, 17, 104, 0.5);
+}
+
+#pic-emo {
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 20px 20px 20px ;
+    background-image: url('../images/wall6.png');
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.grid {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 75px 5px 40px;
+    min-width: 200px;
+    padding: 10px;
+    position: relative;
+    
+}
+
+.grid-item {
+    padding: 10px 0 10px 0;
+    background-color: pink;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    border: 2px solid gray;
+}
+
+.grid-item img {
+    padding: 20px;
+    width: 190px;
+    height: 120px;
+}
+
+.grid-item:hover {
+    transform: translateY(-2%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+    padding: 2px;
+}
+
+.card-content {
+    padding: 13px;
+}
+
+.card-header {
+    font-size: 18px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #3d3d3d;
+    margin-bottom: 1rem;
+    border: 2px solid gray;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.card-text:hover {
+    color: black;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.card-btn {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    text-align: #3363ff;
+    background-color: white;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.card-btn span {
+    margin-left: 1rem;
+    transition: 0.2s;
+}
+
+.card-btn:hover
+.card-btn:active {
+    background-color: white;
+}
+
+.card-btn:hover, span
+.card-btn:active span {
+    margin-left: 0.4rem;
+}
+
+
+/* Gallery */
+
+.gallery-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: whitesmoke;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+}
+
+.gallery img {
+    margin-left: 18px;
+    width: 110%;
+    height: 50vh;
+    gap: 30px;
+    padding: 10px;
+    border: .5px solid black;
+    background-color: white;
+    padding-bottom: 70px;
+}
+
+.gallery img:hover {
+    transition: all 0.3s ease;
+    transform: translateY(-2%);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.9);
+}
+
+/** Links **/
+
+#icons {
+    justify-content: space-between;
+    display: flex;
+    padding: 50px 90px;
+    background-image: url('../images/wall4.jpg');
+    background-size: cover;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.6);
+}
+
+#icons .icon {
+    text-align: center;
+    padding: 50px 25px ;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+#icons .icon:hover{
+    color: black;
+    transform: translateY(3%);
+    box-shadow: 0 1rem 6rem rgba(214, 200, 200, 0.7);
+}
+
+#icons img {
+    text-align: center;
+    padding: 8px;
+    background-color: white;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+    border: 2px solid white;
+}
+
+#icons img:hover{
+    transform: translateY(-0.9%);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
+}
+
+.icon {
+    text-align: center;
+}
+
+#icons .icon a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    padding: 12px;
+    background-color: white;
+    border-radius: 11px;
+}
+
+#icons .icon a:hover{
+    transform: translateY(-0.9%);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.8);
+}
+
+#icons a:hover {
+    color: red;
+}
+
+
+/**Account**/
+.container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba (0, 0, 0, 0.3);
+    overflow: 400px;
+    width: 400px;
+    max-width: 100%;
+}
+
+
+.header {
+    background-color: whitesmoke;
+    border-bottom: 1px solid grey;
+    padding: 20px 40px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+form {
+    padding: 40px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.form-control input {
+    padding: 10px;
+    border: 2px solid pink;
+}
+
+.btn {
+    border: 2px solid white;
+   
+}
+
+.btn Button{
+    margin-left: 90px;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 50px;
+    background-color: purple;
+    color: white;
+    border: 2px solid white;
+    font-size: 15px;
+}
+
+/*Account*/
+
+#logsign {
+    background-color: #3363ff;
+}
+#logsign .container {
+    width: 100%;
+    height: 100vh;
+    background-color: #3363ff;
+}
+
+
+
+#photography {
+    background-image:  url('../images/wall10.png');  
+    background-size: cover;
+    padding: 25px;
+    margin-top: 40px;
+    margin-left: 160px;
+    margin-right: 160px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#photography h1 {
+    font-size: 35px;
+    text-align: center;
+}
+
+#photography h2 {
+    font-weight: 100;
+    font-size: 20px;
+    text-align: center;
+}
+
+#photography .photo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#photography .photo img {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+}
+
+#photography .photo img:hover {
+    transform: translateY(-5%);
+    transition: all .8s ease;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/shop.css'%}">
+    {%block css%} {%endblock %}
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <title>Shop</title>
+
+</head>
+<body>
+    <!--NavBar --> 
+    <section id="header">
+        <img src="{%static 'images/cliniclogo.png'%}" alt="logo" width="80px" height="80px">
+         <div>
+            <ul id="navbar">
+                <li><a class="active" chref="shop.html">Home</a></li>
+                <li><a href="calendar.html">Clinic Calendar</a></li>
+                <li><a href="scheduler.html">Appointment Scheduler</a></li>
+
+                {% if user.is_authenticated%}
+                <li><a href="{%url 'logout'%}">LogOut</a></li>
+                {%else%}
+                {%endif%}
+                
+         </div> 
+     </section><br>
+
+     <section id="shop">
+        <div class="main-banner">
+            <img src="{%static 'images/pet1.png'%}" alt="">
+                <div class="motto">
+                    <h1>Welcome to HAPPY PAWS Clinic</h1>
+                    <button class="button-1"><a href="scheduler.html">Book Now for Appointment</a></button>
+                </div>
+        </div>
+    </section><br><br><br>
+
+    <hr style="height:3px;border-width:0;color:gray;background-color:black"><br>
+    <hr style="height:1px;border-width:0;color:gray;background-color:black">
+
+        <div class="slide-container">
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+    
+                            <div class="card-image">
+                                <img src="{%static 'images/pet5.png'%}" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Doctor Appointment</h2>
+                            <p class="description"></p>
+
+                            <button class="button">Available Soon!</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+    
+                            <div class="card-image">
+                                <img src="{%static 'images/pet6.png'%}" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Pet Essentials</h2>
+                            <p class="description"></p>
+
+                            <button class="button">Available Soon!</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+    
+                            <div class="card-image">
+                                <img src="{%static 'images/pet7.png'%}" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">How's My Pet?</h2>
+                            <p class="description"></p>
+
+                            <button class="button">Available Soon!</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+    
+                            <div class="card-image">
+                                <img src="{%static 'images/pet8.png'%}" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Pet Grooming</h2>
+                            <p class="description"></p>
+
+                            <button class="button">Available Soon!</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+         <hr style="height:1px;border-width:0;color:gray;background-color:black"><br>
+         <hr style="height:3px;border-width:0;color:gray;background-color:black"><br><br><br>
+
+        <section id="clinic-image"><br><br><br>
+            <h3>"BLOOD makes you RELATED, but LOVE makes you FAMILY"</h3>
+                <img src="{%static 'images/pet9.jpg'%}" alt="" id="one">
+                <img src="{%static 'images/pet10.jpg'%}" alt="" id="two">
+                <img src="{%static 'images/pet11.jpg'%}" alt="" id="three">
+                <img src="{%static 'images/pet12.jpg'%}" alt="" id="four">
+                <img src="{%static 'images/pet13.jpg'%}" alt="" id="five">
+                <img src="{%static 'images/pet14.jpg'%}" alt="" id="six">
+                <img src="{%static 'images/pet15.jpg'%}" alt="" id="seven">
+                <img src="{%static 'images/pet9.jpg'%}" alt="" id="eight">
+                <img src="{%static 'images/pet10.jpg'%}" alt="" id="nine">
+                <img src="{%static 'images/pet18.jpg'%}" alt="" id="ten">
+                <img src="{%static 'images/pet19.jpg'%}"alt="" id="eleven">
+                <img src="{%static 'images/pet20.jpg'%}"alt="" id="twelve">
+        </section>
+
+
+        <section id="newsletter" class="section-p1 section-m1">
+            <div class="newstext">
+                <h3>Sign up for Newsletter</h3>
+                <p>Get E-mail updates about our latest updates and <span>special offers for clinic appointments</span>.</p>
+            </div>
+            <div class="form">
+                <form>
+                    <input type="email" class="input-field" placeholder="Your email address" required>
+                </form>
+        
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        
+        <footer class="section-p1">
+            <div class="col">
+                <img class="logo" src="{%static 'images/cliniclogo.png'%}" alt="websitelogo" width="120px">
+                <h3>Contact</h3>
+                <p><strong>Address:</strong>Lamacan, Argao, Cebu</p>
+                <p><strong>Phone:</strong>09162859403</p><br>
+                <p><strong>Open Hours:</strong></p>
+                  <p><strong>WEEKDAYS:</strong>7:00AM-7:00PM</p>
+                  <p><strong>WEEKENDS:</strong>9:00AM-6:00PM</p>
+                <div class="follow"><br>
+                     <h3>Follow us</h3>
+                     <div class="icon">
+                        <img src="{%static 'images/facebook.png'%}" alt="" width="20px">
+                        <img src="{%static 'images/instagram.png'%}" alt="" width="20px">
+                        <img src="{%static 'images/twitter.png'%}" alt="" width="20px">
+                     </div>
+                </div>
+            </div>
+        
+            <div class="col">
+                <h3>About</h3>
+                <a href="#">About us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact us</a>
+            </div>
+        
+            <div class="col">
+                <h3>My Account</h3>
+                <a href="rclinic.html">Sign in</a>
+            </div>
+        
+            <div class="col install">
+                <h3>Install App</h3>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="{%static 'images/ios.png'%}"alt="" width="70px">
+                    <img src="{%static 'images/android.png'%}" alt="" width="65px">
+                </div><br>
+                <p>Secured Payments Gateaway</p>
+                <img src="{%static 'images/visa.png'%}"alt="" width="30px">
+                <img src="{%static 'images/mastercard.png'%}" alt="" width="20px">
+                <img src="{%static 'images/gcash.png'%}" alt="" width="60px">
+            </div>
+            
+            <div class="copyright">
+                <p>@2022-2023, Happy Paws Clinic | Official Website</p>
+            </div>
+        </footer>
+</body>
+</html>

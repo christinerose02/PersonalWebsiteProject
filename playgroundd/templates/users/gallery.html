@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.css'%}">
+    {%block css%} {%endblock%}
+
+
+    <title>Image Gallery</title>
+</head>
+<body>
+    <!--NavBar --> 
+    <section id="header">
+        <img src="{%static 'images/logo.png'%}"alt="logo" width="80px" height="80px">
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">|| Home ||</a></li>
+                <li><a href="aboutme.html">|| About Me ||</a></li>
+                <li><a href="emoji.html">|| Emoji ||</a></li>
+                <li><a class="active" href="gallery.html">|| Gallery ||</i></a></li>
+                <li><a href="links.html">|| Follow me On ||</a></li>
+                <li><a href="user_login.html">MY SHOP</a></li>
+            </ul>
+        </div>
+    </section><br><br>
+    
+        <div style="text-align:center">
+            <p>&#9825&#9825&#9825&#9825&#9825- - - - -| I M A G E&nbsp;&nbsp;&nbsp;G A L L E R Y |- - - - -&#9825&#9825&#9825&#9825&#9825</p><br>
+        </div>
+        
+        <!-- The four columns -->
+        <hr style="height:3px;border-width:0;color:gray;background-color:gray"><br>
+        <hr style="height:1px;border-width:0;color:gray;background-color:gray"><br>
+    
+        <div class="gallery-container">
+            <div class="gallery">
+                <a href="{%static 'images/pic1.jpeg'%}" data-lightbox="models" data-title="Aesthetic Pic 1">
+                    <img src="{%static 'images/pic1.jpeg'%}" alt="">
+                </a>
+    
+                <a href="{%static 'images/pic2.jpeg'%}" data-lightbox="models" data-title="Aesthetic Pic 2">
+                    <img src="{%static 'images/pic2.jpeg'%}" alt="">
+                </a>
+    
+                <a href="{%static 'images/pic3.jpeg'%}"data-lightbox="models" data-title="Aesthetic Pic 3">
+                    <img src="{%static 'images/pic3.jpeg'%}" alt="">
+                </a>
+                
+                <a href="{%static 'images/pic4.jpeg'%}"data-lightbox="models" data-title="Aesthetic Pic 4">
+                    <img src="{%static 'images/pic4.jpeg'%}" alt="">
+                </a>
+    
+                <a href="{%static 'images/pic5.jpeg'%}"data-lightbox="models" data-title="Aesthetic Pic 5">
+                    <img src="{%static 'images/pic5.jpeg'%}" alt="">
+                </a>
+    
+                <a href="{%static 'images/pic6.jpeg'%}" data-lightbox="models" data-title="Aesthetic Pic 6">
+                    <img src="{%static 'images/pic6.jpeg'%}" alt="">
+                </a>
+    
+                <a href="{%static 'images/pic7.jpeg'%}" data-lightbox="models" data-title="Aesthetic Pic 7">
+                    <img src="{%static 'images/pic7.jpeg'%}" alt="">
+                </a>
+    
+                <a href="{%static 'images/pic8.jpeg'%}" data-lightbox="models" data-title="Aesthetic Pic 8">
+                    <img src="{%static 'images/pic8.jpeg'%}" alt="">
+                </a>
+    
+            </div>
+        </div>
+        
+        {%block script%}
+            <script src="{%static 'js/lightbox-plus-jquery.js'%}"></script><br>
+        {%endblock%}
+
+        <hr style="height:1px;border-width:0;color:gray;background-color:gray"><br>
+        <hr style="height:3px;border-width:0;color:gray;background-color:gray"><br><br><br>
+</body>
+</html>

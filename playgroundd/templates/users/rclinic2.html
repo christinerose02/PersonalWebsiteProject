@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/rclinic.css'%}">
+    {%block css%} {%endblock %}
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script defer src="rclinic2.js"></script>
+</head>
+<body>
+    <!--NavBar --> 
+    <section id="header">
+        <img src="{%static 'images/cliniclogo.png'%}" alt="logo" width="80px" height="80px">
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">|| Home ||</a></li>
+                <li><a href="aboutme.html">|| About Me ||</a></li>
+                <li><a href="emoji.html">|| Emoji ||</a></li>
+                <li><a href="gallery.html">|| Gallery ||</i></a></li>
+                <li><a href="links.html">|| Follow me On ||</a></li>
+                <li><a class="active" href="user_login.html">MY SHOP</a></li>
+            </ul>
+        </div>
+    </section><br><br>
+
+
+
+    <section id="con">
+        <img src="{%static 'images/cliniclogo.png'%}" alt="">
+        <div class="container">
+            <form id="form" action="/">
+                <h1>Account Log In</h1>
+                
+                <div class="input-control">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text">
+                    <div class="error"></div>
+                </div>
+                
+                <div class="input-control">
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="text">
+                    <div class="error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="password">Password</label>
+                    <input id="password"name="password" type="password">
+                    <div class="error"></div>
+                </div>
+
+               
+                <button id="myButton">Log In</button>
+                <p>I have already an Account <a href="rclinic.html">Sign Up</a></p>
+
+            
+                </script>
+            </form>
+        </div>
+    </section><br><br>
+</body>
+</html>
